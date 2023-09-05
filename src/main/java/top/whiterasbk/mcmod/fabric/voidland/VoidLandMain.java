@@ -5,9 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -46,15 +44,15 @@ public class VoidLandMain implements ModInitializer {
 
     public void registerBlocks() {
 
-        Blocks.SAMPLE_BLOCK = Registry.register(Registries.BLOCK, new Identifier(namespace, "a_voidland_sample_block"),
+        VoidLandBlocks.SAMPLE_BLOCK = Registry.register(Registries.BLOCK, new Identifier(namespace, "a_voidland_sample_block"),
                 new SampleBlock(FabricBlockSettings.create().strength(4.0f)));
         Registry.register(Registries.ITEM, new Identifier(namespace, "a_voidland_sample_block"),
-                new BlockItem(Blocks.SAMPLE_BLOCK, new FabricItemSettings()));
+                new BlockItem(VoidLandBlocks.SAMPLE_BLOCK, new FabricItemSettings()));
 
     }
 
     public void registerItems() {
-        Items.SAMPLE_ITEM =
+        VoidLandItems.SAMPLE_ITEM =
                 Registry.register(Registries.ITEM, new Identifier(namespace, "a_voidland_sample_item"),
                         new SampleItem(new FabricItemSettings()));
 
