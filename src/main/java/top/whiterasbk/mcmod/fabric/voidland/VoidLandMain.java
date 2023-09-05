@@ -30,18 +30,8 @@ public class VoidLandMain implements ModInitializer {
     @Override
     public void onInitialize() {
 
-        // registering items
-        final Item SAMPLE_ITEM =
-                Registry.register(Registries.ITEM, new Identifier(namespace, "a_voidland_sample_item"),
-                        new SampleItem(new FabricItemSettings()));
-
-        // registering blocks
-        Blocks.SAMPLE_BLOCK = Registry.register(Registries.BLOCK, new Identifier(namespace, "a_voidland_sample_block"),
-                new SampleBlock(FabricBlockSettings.create().strength(4.0f)));
-        Registry.register(Registries.ITEM, new Identifier(namespace, "a_voidland_sample_block"),
-                new BlockItem(Blocks.SAMPLE_BLOCK, new FabricItemSettings()));
-
-
+        registerBlocks();
+        registerItems();
 
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) ->
             dispatcher.register(literal("voidland")
@@ -52,8 +42,25 @@ public class VoidLandMain implements ModInitializer {
             )
         );
 
+    }
+
+    public void registerBlocks() {
+
+        Blocks.SAMPLE_BLOCK = Registry.register(Registries.BLOCK, new Identifier(namespace, "a_voidland_sample_block"),
+                new SampleBlock(FabricBlockSettings.create().strength(4.0f)));
+        Registry.register(Registries.ITEM, new Identifier(namespace, "a_voidland_sample_block"),
+                new BlockItem(Blocks.SAMPLE_BLOCK, new FabricItemSettings()));
 
 
+    }
+
+    public void registerItems() {
+        Items.SAMPLE_ITEM =
+                Registry.register(Registries.ITEM, new Identifier(namespace, "a_voidland_sample_item"),
+                        new SampleItem(new FabricItemSettings()));
+
+        Items.B_SAMPLE_ITEM = Registry.register(Registries.ITEM, new Identifier(namespace, "b_item"),
+                new SampleItem(new FabricItemSettings()));
     }
 }
 

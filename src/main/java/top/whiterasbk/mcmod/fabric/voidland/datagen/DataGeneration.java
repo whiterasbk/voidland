@@ -8,9 +8,14 @@ import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import net.minecraft.item.Item;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import top.whiterasbk.mcmod.fabric.voidland.Blocks;
+import top.whiterasbk.mcmod.fabric.voidland.Items;
 
 public class DataGeneration implements DataGeneratorEntrypoint {
+
+    private static final Logger logger = LoggerFactory.getLogger(DataGeneration.class);
 
     @Override
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
@@ -31,7 +36,17 @@ public class DataGeneration implements DataGeneratorEntrypoint {
 
         @Override
         public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-            itemModelGenerator.register(Item.fromBlock(Blocks.SAMPLE_BLOCK), Models.GENERATED);
+            // item
+            for (var item : Items.all()) {
+                itemModelGenerator.register(item, Models.GENERATED);
+                logger.info("registered item: " + item.getName());
+            }
+
+            // block item
+            for (var block : Blocks.all()) {
+                itemModelGenerator.register(Item.fromBlock(block), Models.GENERATED);
+                logger.info("registered block item: " + block.getName());
+            }
         }
     }
 
