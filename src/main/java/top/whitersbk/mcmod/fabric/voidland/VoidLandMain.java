@@ -19,7 +19,7 @@ public class VoidLandMain implements ModInitializer {
     public void onInitialize() {
 
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) ->
-            dispatcher.register(literal("back")
+            dispatcher.register(literal("voidland")
                 .executes(context -> {
                     context.getSource().sendError(Text.literal("hello voidland"));
                     return 1;
