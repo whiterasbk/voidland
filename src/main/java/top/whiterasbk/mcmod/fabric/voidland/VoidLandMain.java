@@ -36,10 +36,10 @@ public class VoidLandMain implements ModInitializer {
                         new SampleItem(new FabricItemSettings()));
 
         // registering blocks
-        final Block SAMPLE_BLOCK = Registry.register(Registries.BLOCK, new Identifier(namespace, "a_voidland_sample_block"),
+        Blocks.SAMPLE_BLOCK = Registry.register(Registries.BLOCK, new Identifier(namespace, "a_voidland_sample_block"),
                 new SampleBlock(FabricBlockSettings.create().strength(4.0f)));
         Registry.register(Registries.ITEM, new Identifier(namespace, "a_voidland_sample_block"),
-                new BlockItem(SAMPLE_BLOCK, new FabricItemSettings()));
+                new BlockItem(Blocks.SAMPLE_BLOCK, new FabricItemSettings()));
 
 
 

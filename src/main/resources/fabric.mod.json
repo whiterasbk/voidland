@@ -9,7 +9,7 @@
     "repo": "https://github.com/whiterasbk/voidland"
   },
   "license": "GPL-3.0",
-  "icon": "assets/voidland/icon.png",
+  "icon": "assets/voidland/icon.svg",
   "environment": "*",
   "entrypoints": {
     "client": [],
@@ -18,7 +18,7 @@
     ]
   },
   "mixins": [
-    "voidland.mixins.json"
+    "voidland.mixin.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",

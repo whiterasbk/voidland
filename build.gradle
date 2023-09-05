@@ -70,7 +70,17 @@ jar {
 
 loom {
     // accessWidener file path
-    // accessWidenerPath = file("src/main/resources/modid.accesswidener")
+    accessWidenerPath = file("src/main/resources/voidland.accesswidener")
+    runs {
+        datagenClient {
+            inherit client
+            name "Data Generation"
+            vmArg "-Dfabric-api.datagen"
+            vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/resources")}"
+            vmArg "-Dfabric-api.datagen.strict-validation"
+            runDir "build/datagen"
+        }
+    }
 }
 
 
