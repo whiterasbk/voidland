@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "voidland:block/a_voidland_sample_block"
-  }
-}

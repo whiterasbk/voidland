@@ -59,8 +59,6 @@ public class VoidLandMain implements ModInitializer {
                 Registry.register(Registries.ITEM, new Identifier(namespace, "a_voidland_sample_item"),
                         new SampleItem(new FabricItemSettings()));
 
-        Items.B_SAMPLE_ITEM = Registry.register(Registries.ITEM, new Identifier(namespace, "b_item"),
-                new SampleItem(new FabricItemSettings()));
     }
 }
 

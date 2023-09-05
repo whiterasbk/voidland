@@ -1,6 +1,5 @@
 package top.whiterasbk.mcmod.fabric.voidland;
 
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
 public class Items {
