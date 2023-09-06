@@ -15,7 +15,7 @@ public class DataGeneration implements DataGeneratorEntrypoint {
         pack.addProvider(ModelGenerator::new);
         pack.addProvider(ExistingEnglishLangProvider::new);
         pack.addProvider(ChineseMainlandLangProvider::new);
-//        pack.addProvider(RecipeProvider::new);
+        pack.addProvider(RecipeProvider::new);
     }
 
 }

@@ -20,8 +20,8 @@ public class Main implements ModInitializer {
     @Override
     public void onInitialize() {
 
-        registerBlocks();
         registerItems();
+        registerBlocks();
 
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) ->
             dispatcher.register(literal("voidland")
