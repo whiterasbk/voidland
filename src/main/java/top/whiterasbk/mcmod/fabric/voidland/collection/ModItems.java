@@ -1,14 +1,14 @@
-package top.whiterasbk.mcmod.fabric.voidland;
+package top.whiterasbk.mcmod.fabric.voidland.collection;
 
 import net.minecraft.item.Item;
 
-public class ModItems {
+public class ModItems extends VoidLandItemRegistryCollection{
     public static Item SAMPLE_ITEM;
-    public static Item B_SAMPLE_ITEM;
 
     public static Item[] all() {
         return new Item[] {
-                SAMPLE_ITEM, B_SAMPLE_ITEM
+            SAMPLE_ITEM
         };
     }
+
 }

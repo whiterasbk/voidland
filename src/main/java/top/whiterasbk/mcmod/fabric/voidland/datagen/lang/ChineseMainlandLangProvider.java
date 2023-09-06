@@ -2,8 +2,8 @@ package top.whiterasbk.mcmod.fabric.voidland.datagen.lang;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-import top.whiterasbk.mcmod.fabric.voidland.ModBlocks;
-import top.whiterasbk.mcmod.fabric.voidland.ModItems;
+import top.whiterasbk.mcmod.fabric.voidland.collection.ModBlocks;
+import top.whiterasbk.mcmod.fabric.voidland.collection.ModItems;
 
 public class ChineseMainlandLangProvider extends FabricLanguageProvider {
 

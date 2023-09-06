@@ -2,9 +2,9 @@ package top.whiterasbk.mcmod.fabric.voidland.datagen.lang;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-import top.whiterasbk.mcmod.fabric.voidland.ModBlocks;
-import top.whiterasbk.mcmod.fabric.voidland.ModItems;
-import top.whiterasbk.mcmod.fabric.voidland.VoidLandMain;
+import top.whiterasbk.mcmod.fabric.voidland.collection.ModBlocks;
+import top.whiterasbk.mcmod.fabric.voidland.collection.ModItems;
+import top.whiterasbk.mcmod.fabric.voidland.voidland;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -26,12 +26,12 @@ public class ExistingEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.SAMPLE_ITEM, "A voidland sample item");
 
         try {
-            Optional<Path> path = dataOutput.getModContainer().findPath("assets/" + VoidLandMain.modid + "/lang/en_us.base.json");
+            Optional<Path> path = dataOutput.getModContainer().findPath("assets/" + voidland.modid + "/lang/en_us.base.json");
 
             if (path.isPresent()) {
                 translationBuilder.add(path.get());
             } else {
-                String msg = "The existing language file could not be found in the " + VoidLandMain.modid + " assets!";
+                String msg = "The existing language file could not be found in the " + voidland.modid + " assets!";
                 if (requireExisting) {
                     throw new RuntimeException(msg);
                 } else logger.error(msg);

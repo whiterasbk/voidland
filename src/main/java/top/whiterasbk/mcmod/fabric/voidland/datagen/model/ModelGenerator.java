@@ -6,8 +6,8 @@ import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import net.minecraft.util.Identifier;
-import top.whiterasbk.mcmod.fabric.voidland.ModBlocks;
-import top.whiterasbk.mcmod.fabric.voidland.ModItems;
+import top.whiterasbk.mcmod.fabric.voidland.collection.ModBlocks;
+import top.whiterasbk.mcmod.fabric.voidland.collection.ModItems;
 
 import static top.whiterasbk.mcmod.fabric.voidland.util.GlobalLogger.logger;
 

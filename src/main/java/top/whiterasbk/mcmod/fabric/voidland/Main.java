@@ -4,19 +4,15 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.item.BlockItem;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
 import top.whiterasbk.mcmod.fabric.voidland.block.SampleBlock;
+import top.whiterasbk.mcmod.fabric.voidland.collection.ModBlocks;
+import top.whiterasbk.mcmod.fabric.voidland.collection.ModItems;
 import top.whiterasbk.mcmod.fabric.voidland.item.SampleItem;
 
 import static net.minecraft.server.command.CommandManager.literal;
 
-public class VoidLandMain implements ModInitializer {
-    public static final String modid = "voidland";
-    public static final String namespace = modid;
+public class Main implements ModInitializer {
 
     /**
      * Runs the mod initializer.
@@ -39,19 +35,12 @@ public class VoidLandMain implements ModInitializer {
     }
 
     public void registerBlocks() {
-
-        ModBlocks.SAMPLE_BLOCK = Registry.register(Registries.BLOCK, new Identifier(namespace, "a_voidland_sample_block"),
-                new SampleBlock(FabricBlockSettings.create().strength(4.0f)));
-        Registry.register(Registries.ITEM, new Identifier(namespace, "a_voidland_sample_block"),
-                new BlockItem(ModBlocks.SAMPLE_BLOCK, new FabricItemSettings()));
-
+        ModBlocks.SAMPLE_BLOCK =
+                ModBlocks.registerVoidLandCustomBlock("a_voidland_sample_block", new SampleBlock(FabricBlockSettings.create().strength(4.0f)));
     }
 
     public void registerItems() {
-        ModItems.SAMPLE_ITEM =
-                Registry.register(Registries.ITEM, new Identifier(namespace, "a_voidland_sample_item"),
-                        new SampleItem(new FabricItemSettings()));
-
+        ModItems.SAMPLE_ITEM = ModItems.registerVoidLandCustomItem("a_voidland_sample_item", new SampleItem(new FabricItemSettings()));
     }
 }
 

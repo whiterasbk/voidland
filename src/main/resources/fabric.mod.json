@@ -14,7 +14,7 @@
   "entrypoints": {
     "client": [],
     "main": [
-      "top.whiterasbk.mcmod.fabric.voidland.VoidLandMain"
+      "top.whiterasbk.mcmod.fabric.voidland.Main"
     ],
     "fabric-datagen": [
       "top.whiterasbk.mcmod.fabric.voidland.datagen.DataGeneration"
