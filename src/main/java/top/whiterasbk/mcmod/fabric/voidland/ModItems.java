@@ -2,7 +2,7 @@ package top.whiterasbk.mcmod.fabric.voidland;
 
 import net.minecraft.item.Item;
 
-public class VoidLandItems {
+public class ModItems {
     public static Item SAMPLE_ITEM;
     public static Item B_SAMPLE_ITEM;
 

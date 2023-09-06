@@ -2,8 +2,8 @@ package top.whiterasbk.mcmod.fabric.voidland.datagen.lang;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-import top.whiterasbk.mcmod.fabric.voidland.VoidLandBlocks;
-import top.whiterasbk.mcmod.fabric.voidland.VoidLandItems;
+import top.whiterasbk.mcmod.fabric.voidland.ModBlocks;
+import top.whiterasbk.mcmod.fabric.voidland.ModItems;
 
 public class ChineseMainlandLangProvider extends FabricLanguageProvider {
 
@@ -13,7 +13,7 @@ public class ChineseMainlandLangProvider extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
-        translationBuilder.add(VoidLandBlocks.SAMPLE_BLOCK, "样本方块");
-        translationBuilder.add(VoidLandItems.SAMPLE_ITEM, "样本物品");
+        translationBuilder.add(ModBlocks.SAMPLE_BLOCK, "样本方块");
+        translationBuilder.add(ModItems.SAMPLE_ITEM, "样本物品");
     }
 }

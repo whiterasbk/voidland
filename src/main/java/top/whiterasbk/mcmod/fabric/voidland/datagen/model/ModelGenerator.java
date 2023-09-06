@@ -6,8 +6,8 @@ import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import net.minecraft.util.Identifier;
-import top.whiterasbk.mcmod.fabric.voidland.VoidLandBlocks;
-import top.whiterasbk.mcmod.fabric.voidland.VoidLandItems;
+import top.whiterasbk.mcmod.fabric.voidland.ModBlocks;
+import top.whiterasbk.mcmod.fabric.voidland.ModItems;
 
 import static top.whiterasbk.mcmod.fabric.voidland.util.GlobalLogger.logger;
 
@@ -19,7 +19,7 @@ public class ModelGenerator extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        for (var block : VoidLandBlocks.all()) {
+        for (var block : ModBlocks.all()) {
             blockStateModelGenerator.registerSimpleCubeAll(block);
             logger.info("registered block: " + block);
 
@@ -34,7 +34,7 @@ public class ModelGenerator extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        for (var item : VoidLandItems.all()) {
+        for (var item : ModItems.all()) {
             itemModelGenerator.register(item, Models.GENERATED);
             logger.info("registered item: " + item);
         }
