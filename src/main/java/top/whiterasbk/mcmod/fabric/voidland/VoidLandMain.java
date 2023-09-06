@@ -17,8 +17,6 @@ import top.whiterasbk.mcmod.fabric.voidland.item.SampleItem;
 import static net.minecraft.server.command.CommandManager.literal;
 
 public class VoidLandMain implements ModInitializer {
-
-    private static final Logger logger = LogUtils.getLogger();
     public static final String modid = "voidland";
     public static final String namespace = modid;
 
